@@ -1,0 +1,200 @@
+<html lang="en">
+<head><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+<style>
+    .bar{
+  
+  height: 70px;
+  padding: 0 30px;
+  margin:0px;
+  
+  background-color:black;
+  /* opacity:0.6; */
+  font-family:'Poppins',sans-serif;
+  font-size:25px;
+}
+a
+{
+  color:white;
+  float:right;
+  text-decoration:none;
+  padding-right:20px;
+  font-size: 30px;
+    font-weight: 300;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+a:hover{
+    padding: 3.5px;
+    background: #a142fa;
+
+}
+h1{
+    color:black;
+    font-family:Poppins;
+    font-size:30
+}
+h2{
+    color:black;
+    font-family: Poppins;
+    font-size:60;
+    margin-bottom: 10px;
+    
+}
+.my-cta-button{
+
+    font-size: 20px;
+    color: rgb(15, 15, 15); 
+    border: 1px solid #0e0e0ccf;
+    padding: 3.5px;
+   
+    cursor: pointer; 
+}
+.my-cta-button:hover{
+    border: 2px solid #a142fa;
+    padding: 3.5px;
+    background: #a142fa;
+}
+p
+{
+color:white;
+font-family: Poppins;
+font-size:30px;
+}
+
+</style>
+
+</head>
+
+  <body style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC83TqCBXB662oUpxD3Vrc17yofQ1q79tNaFd1OaMG4vOIn06WT86CngSi_ZA5RCXpkKs&usqp=CAU")>
+
+  <div class="bar">    
+      <a href="hhmr.html">Predict</a>
+      <a href="home.html">Home</a>
+     <br>
+        </div>
+    <div class="container">
+            <center> <div id="content" style="margin-top:2em">
+            <h2><center>MARKET SEGEMENTATION ANALYSIS</center></h2>
+                 <form action="{{ url_for('predict') }}" method="POST">
+     
+     <select id="yummy" name="yummy">
+      <option value="">Yummy</option>
+         <option value="0">No</option>
+         <option value="1">Yes</option>
+     
+       </select><br><br>
+     <select id="convenient" name="convenient">
+      <option value="">convenient
+      </option>
+         <option value="0">No</option>
+         <option value="1">Yes</option>
+     
+       </select><br><br>
+
+
+       <select id="spicy" name="spicy">
+        <option value="">Spicy
+        </option>
+           <option value="0">No
+
+           </option>
+           <option value="1">Yes
+
+        </option>
+       </select><br><br>
+       
+       <select id="fattening" name="fattening">
+            <option value="">Fattening</option>
+               <option value="0">No</option>
+               <option value="1">Yes</option>
+           
+             </select><br><br>
+
+             
+        <select id="greasy" name="greasy">
+                <option value="">Greasy</option>
+                   <option value="0">No</option>
+                   <option value="1">Yes</option>
+               
+                 </select><br><br>
+
+        <select id="fast" name="fast">
+            <option value="">Fast</option>
+                <option value="0">No</option>
+            <option value="1">Yes</option>
+                   
+            </select><br><br> 
+        <select id="cheap" name="cheap">
+                <option value="">Cheap</option>
+                   <option value="0">No</option>
+                   <option value="1">Yes</option>
+               
+                 </select><br><br>
+
+                 
+           <select id="tasty" name="tasty">
+            <option value="">Tasty</option>
+               <option value="0">No</option>
+               <option value="1">Yes</option>
+           
+             </select><br><br> 
+             
+             <select id="expensive" name="expensive">
+                <option value="">Expensive</option>
+                   <option value="0">No</option>
+                   <option value="1">Yes</option>
+               
+                 </select><br><br>
+
+
+
+                 <select id="healthy" name="healthy">
+                    <option value="">healthy</option>
+                       <option value="0">No</option>
+                       <option value="1">Yes</option>
+                   
+                     </select><br><br>
+
+                     <select id="disgusting" name="disgusting">
+                        <option value="">Disgusting</option>
+                           <option value="0">No</option>
+                           <option value="1">Yes</option>
+                       
+                         </select><br><br>
+
+                      <select id="Like" name="Like">
+                        <option value="">like</option>
+                        <LABEL> LIKE: <INPUT TYPE="TEXT" /></LABEL>
+                      </select><br><br>
+
+                      <select id="Age" name="Age">
+                        <option value="">age</option>
+                        <LABEL> AGE: <INPUT TYPE="NUMBER" /></LABEL>
+                        
+                      </select><br><br> 
+                      
+                     
+                      <select id="Gender" name="Gender">
+                        <option value="">Gender</option>
+                           <option value="0">Male</option>
+                           <option value="1">Female</option>
+                       
+                         </select><br><br>
+                      
+                    <input type="submit" class="my-cta-button" value="predict">
+                 </form>
+     
+         <br>
+          <h1 class="predict">Predict={{ predict }} </h1>
+            </div></center>
+         </div>
+     </body>
+</html>
